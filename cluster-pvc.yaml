@@ -32,9 +32,6 @@ spec:
         resources:
           requests:
             storage: 10Gi
-        volumeMode: File
-        accessModes:
-          - ReadWriteOnce
   cephVersion:
     image: quay.io/ceph/ceph:v16.2.7
     allowUnsupported: false
