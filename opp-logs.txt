@@ -1,0 +1,211 @@
+2022-03-04 17:23:59.010253 I | rookcmd: starting Rook v1.8.4 with arguments '/usr/local/bin/rook ceph operator'
+2022-03-04 17:23:59.010379 I | rookcmd: flag values: --enable-machine-disruption-budget=false, --help=false, --kubeconfig=, --log-level=INFO, --operator-image=, --service-account=
+2022-03-04 17:23:59.010382 I | cephcmd: starting Rook-Ceph operator
+2022-03-04 17:23:59.259328 I | cephcmd: base ceph version inside the rook operator image is "ceph version 16.2.7 (dd0603118f56ab514f133c8d2e3adfc983942503) pacific (stable)"
+2022-03-04 17:23:59.266869 I | op-k8sutil: ROOK_CURRENT_NAMESPACE_ONLY="false" (env var)
+2022-03-04 17:23:59.266893 I | operator: watching all namespaces for Ceph CRs
+2022-03-04 17:23:59.266958 I | operator: setting up schemes
+2022-03-04 17:23:59.269120 I | operator: setting up the controller-runtime manager
+2022-03-04 17:24:00.176338 I | operator: looking for admission webhook secret "rook-ceph-admission-controller"
+2022-03-04 17:24:00.179254 I | operator: admission webhook secret "rook-ceph-admission-controller" not found. proceeding without the admission controller
+2022-03-04 17:24:00.179296 I | ceph-cluster-controller: successfully started
+2022-03-04 17:24:00.179351 I | ceph-cluster-controller: enabling hotplug orchestration
+2022-03-04 17:24:00.179369 I | ceph-crashcollector-controller: successfully started
+2022-03-04 17:24:00.179384 I | ceph-block-pool-controller: successfully started
+2022-03-04 17:24:00.179410 I | ceph-object-store-user-controller: successfully started
+2022-03-04 17:24:00.179427 I | ceph-object-realm-controller: successfully started
+2022-03-04 17:24:00.179439 I | ceph-object-zonegroup-controller: successfully started
+2022-03-04 17:24:00.179452 I | ceph-object-zone-controller: successfully started
+2022-03-04 17:24:00.179563 I | ceph-object-controller: successfully started
+2022-03-04 17:24:00.179592 I | ceph-file-controller: successfully started
+2022-03-04 17:24:00.179615 I | ceph-nfs-controller: successfully started
+2022-03-04 17:24:00.179642 I | ceph-rbd-mirror-controller: successfully started
+2022-03-04 17:24:00.179665 I | ceph-client-controller: successfully started
+2022-03-04 17:24:00.179705 I | ceph-filesystem-mirror-controller: successfully started
+2022-03-04 17:24:00.179729 I | operator: rook-ceph-operator-config-controller successfully started
+2022-03-04 17:24:00.179780 I | ceph-csi: rook-ceph-operator-csi-controller successfully started
+2022-03-04 17:24:00.179800 I | op-bucket-prov: rook-ceph-operator-bucket-controller successfully started
+2022-03-04 17:24:00.179816 I | ceph-bucket-topic: successfully started
+2022-03-04 17:24:00.179853 I | ceph-bucket-notification: successfully started
+2022-03-04 17:24:00.179863 I | ceph-bucket-notification: successfully started
+2022-03-04 17:24:00.179873 I | ceph-fs-subvolumegroup-controller: successfully started
+2022-03-04 17:24:00.181444 I | operator: starting the controller-runtime manager
+2022-03-04 17:24:00.282633 I | op-k8sutil: ROOK_CEPH_COMMANDS_TIMEOUT_SECONDS="15" (configmap)
+2022-03-04 17:24:00.282662 I | op-k8sutil: ROOK_LOG_LEVEL="INFO" (configmap)
+2022-03-04 17:24:00.282673 I | op-k8sutil: ROOK_ENABLE_DISCOVERY_DAEMON="false" (configmap)
+2022-03-04 17:24:00.284081 I | ceph-cluster-controller: reconciling ceph cluster in namespace "rook-ceph"
+2022-03-04 17:24:00.285980 I | operator: rook-ceph-operator-config-controller done reconciling
+2022-03-04 17:24:00.323339 I | op-mon: parsing mon endpoints: a=10.245.179.6:6789,b=10.245.12.2:6789
+2022-03-04 17:24:00.323371 I | op-mon: updating obsolete maxMonID 0 to actual value 1
+2022-03-04 17:24:00.323801 I | op-mon: parsing mon endpoints: a=10.245.179.6:6789,b=10.245.12.2:6789
+2022-03-04 17:24:00.323816 I | op-mon: updating obsolete maxMonID 0 to actual value 1
+2022-03-04 17:24:00.323837 I | op-k8sutil: ROOK_OBC_WATCH_OPERATOR_NAMESPACE="true" (configmap)
+2022-03-04 17:24:00.323841 I | op-bucket-prov: ceph bucket provisioner launched watching for provisioner "rook-ceph.ceph.rook.io/bucket"
+2022-03-04 17:24:00.324571 I | op-bucket-prov: successfully reconciled bucket provisioner
+I0304 17:24:00.324627       1 manager.go:135] objectbucket.io/provisioner-manager "msg"="starting provisioner"  "name"="rook-ceph.ceph.rook.io/bucket"
+2022-03-04 17:24:00.329726 I | clusterdisruption-controller: deleted all legacy node drain canary pods
+2022-03-04 17:24:00.340469 I | ceph-csi: successfully created csi config map "rook-ceph-csi-config"
+2022-03-04 17:24:00.343245 I | op-k8sutil: ROOK_CSI_ENABLE_RBD="true" (configmap)
+2022-03-04 17:24:00.343311 I | op-k8sutil: ROOK_CSI_ENABLE_CEPHFS="true" (configmap)
+2022-03-04 17:24:00.343345 I | op-k8sutil: ROOK_CSI_ALLOW_UNSUPPORTED_VERSION="false" (configmap)
+2022-03-04 17:24:00.343356 I | op-k8sutil: ROOK_CSI_ENABLE_GRPC_METRICS="false" (configmap)
+2022-03-04 17:24:00.343366 I | op-k8sutil: CSI_ENABLE_HOST_NETWORK="true" (default)
+2022-03-04 17:24:00.343402 I | op-k8sutil: ROOK_CSI_CEPH_IMAGE="quay.io/cephcsi/cephcsi:v3.5.1" (default)
+2022-03-04 17:24:00.343419 I | op-k8sutil: ROOK_CSI_REGISTRAR_IMAGE="k8s.gcr.io/sig-storage/csi-node-driver-registrar:v2.4.0" (default)
+2022-03-04 17:24:00.343432 I | op-k8sutil: ROOK_CSI_PROVISIONER_IMAGE="k8s.gcr.io/sig-storage/csi-provisioner:v3.1.0" (default)
+2022-03-04 17:24:00.343450 I | op-k8sutil: ROOK_CSI_ATTACHER_IMAGE="k8s.gcr.io/sig-storage/csi-attacher:v3.4.0" (default)
+2022-03-04 17:24:00.343488 I | op-k8sutil: ROOK_CSI_SNAPSHOTTER_IMAGE="k8s.gcr.io/sig-storage/csi-snapshotter:v5.0.1" (default)
+2022-03-04 17:24:00.343501 I | op-k8sutil: ROOK_CSI_KUBELET_DIR_PATH="/var/lib/kubelet" (default)
+2022-03-04 17:24:00.343519 I | op-k8sutil: CSI_VOLUME_REPLICATION_IMAGE="quay.io/csiaddons/volumereplication-operator:v0.3.0" (default)
+2022-03-04 17:24:00.343538 I | op-k8sutil: ROOK_CSIADDONS_IMAGE="quay.io/csiaddons/k8s-sidecar:v0.2.1" (default)
+2022-03-04 17:24:00.343572 I | op-k8sutil: ROOK_CSI_CEPHFS_POD_LABELS="" (default)
+2022-03-04 17:24:00.343588 I | op-k8sutil: ROOK_CSI_RBD_POD_LABELS="" (default)
+2022-03-04 17:24:00.343598 I | ceph-csi: detecting the ceph csi image version for image "quay.io/cephcsi/cephcsi:v3.5.1"
+2022-03-04 17:24:00.343740 I | op-k8sutil: CSI_PROVISIONER_TOLERATIONS="" (default)
+2022-03-04 17:24:00.343764 I | op-k8sutil: CSI_PROVISIONER_NODE_AFFINITY="role=storage-node" (configmap)
+2022-03-04 17:24:00.353795 I | ceph-spec: detecting the ceph image version for image quay.io/ceph/ceph:v16.2.7...
+2022-03-04 17:24:02.831994 I | ceph-spec: detected ceph image version: "16.2.7-0 pacific"
+2022-03-04 17:24:02.832019 I | ceph-cluster-controller: validating ceph version from provided image
+2022-03-04 17:24:02.837918 I | op-mon: parsing mon endpoints: a=10.245.179.6:6789,b=10.245.12.2:6789
+2022-03-04 17:24:02.837950 I | op-mon: updating obsolete maxMonID 0 to actual value 1
+2022-03-04 17:24:02.840228 I | cephclient: writing config file /var/lib/rook/rook-ceph/rook-ceph.config
+2022-03-04 17:24:02.840441 I | cephclient: generated admin config in /var/lib/rook/rook-ceph
+2022-03-04 17:24:03.123489 I | ceph-csi: Detected ceph CSI image version: "v3.5.1"
+2022-03-04 17:24:03.131835 I | op-k8sutil: CSI_FORCE_CEPHFS_KERNEL_CLIENT="true" (configmap)
+2022-03-04 17:24:03.131862 I | op-k8sutil: CSI_CEPHFS_GRPC_METRICS_PORT="9091" (default)
+2022-03-04 17:24:03.131865 I | op-k8sutil: CSI_CEPHFS_GRPC_METRICS_PORT="9091" (default)
+2022-03-04 17:24:03.131869 I | op-k8sutil: CSI_CEPHFS_LIVENESS_METRICS_PORT="9081" (default)
+2022-03-04 17:24:03.131871 I | op-k8sutil: CSI_CEPHFS_LIVENESS_METRICS_PORT="9081" (default)
+2022-03-04 17:24:03.131874 I | op-k8sutil: CSI_RBD_GRPC_METRICS_PORT="9093" (configmap)
+2022-03-04 17:24:03.131877 I | op-k8sutil: CSI_RBD_GRPC_METRICS_PORT="9093" (configmap)
+2022-03-04 17:24:03.131907 I | op-k8sutil: CSIADDONS_PORT="9070" (default)
+2022-03-04 17:24:03.131910 I | op-k8sutil: CSIADDONS_PORT="9070" (default)
+2022-03-04 17:24:03.131913 I | op-k8sutil: CSI_RBD_LIVENESS_METRICS_PORT="9080" (default)
+2022-03-04 17:24:03.131916 I | op-k8sutil: CSI_RBD_LIVENESS_METRICS_PORT="9080" (default)
+2022-03-04 17:24:03.131919 I | op-k8sutil: CSI_PLUGIN_PRIORITY_CLASSNAME="" (default)
+2022-03-04 17:24:03.131922 I | op-k8sutil: CSI_PROVISIONER_PRIORITY_CLASSNAME="" (default)
+2022-03-04 17:24:03.131925 I | op-k8sutil: CSI_ENABLE_OMAP_GENERATOR="false" (default)
+2022-03-04 17:24:03.131928 I | op-k8sutil: CSI_ENABLE_RBD_SNAPSHOTTER="true" (configmap)
+2022-03-04 17:24:03.131932 I | op-k8sutil: CSI_ENABLE_CEPHFS_SNAPSHOTTER="true" (configmap)
+2022-03-04 17:24:03.131935 I | op-k8sutil: CSI_ENABLE_VOLUME_REPLICATION="false" (configmap)
+2022-03-04 17:24:03.131938 I | op-k8sutil: CSI_ENABLE_CSIADDONS="false" (configmap)
+2022-03-04 17:24:03.131965 I | op-k8sutil: CSI_CEPHFS_PLUGIN_UPDATE_STRATEGY="RollingUpdate" (default)
+2022-03-04 17:24:03.131968 I | op-k8sutil: CSI_RBD_PLUGIN_UPDATE_STRATEGY="RollingUpdate" (default)
+2022-03-04 17:24:03.131971 I | op-k8sutil: CSI_PLUGIN_ENABLE_SELINUX_HOST_MOUNT="false" (configmap)
+2022-03-04 17:24:03.131980 I | ceph-csi: Kubernetes version is 1.21
+2022-03-04 17:24:03.131984 I | op-k8sutil: ROOK_CSI_RESIZER_IMAGE="k8s.gcr.io/sig-storage/csi-resizer:v1.4.0" (default)
+2022-03-04 17:24:03.131986 I | op-k8sutil: CSI_LOG_LEVEL="" (default)
+2022-03-04 17:24:03.137285 I | op-k8sutil: CSI_PROVISIONER_REPLICAS="2" (configmap)
+2022-03-04 17:24:03.144014 I | op-k8sutil: CSI_PROVISIONER_TOLERATIONS="" (default)
+2022-03-04 17:24:03.144046 I | op-k8sutil: CSI_PROVISIONER_NODE_AFFINITY="role=storage-node" (configmap)
+2022-03-04 17:24:03.144059 I | op-k8sutil: CSI_PLUGIN_TOLERATIONS="" (default)
+2022-03-04 17:24:03.144063 I | op-k8sutil: CSI_PLUGIN_NODE_AFFINITY="role=storage-node" (configmap)
+2022-03-04 17:24:03.144070 I | op-k8sutil: CSI_RBD_PLUGIN_TOLERATIONS="" (default)
+2022-03-04 17:24:03.144076 I | op-k8sutil: CSI_RBD_PLUGIN_NODE_AFFINITY="" (default)
+2022-03-04 17:24:03.144079 I | op-k8sutil: CSI_RBD_PLUGIN_RESOURCE="" (default)
+2022-03-04 17:24:03.249567 I | op-k8sutil: CSI_RBD_PROVISIONER_TOLERATIONS="" (default)
+2022-03-04 17:24:03.249619 I | op-k8sutil: CSI_RBD_PROVISIONER_NODE_AFFINITY="" (default)
+2022-03-04 17:24:03.249626 I | op-k8sutil: CSI_RBD_PROVISIONER_RESOURCE="" (default)
+2022-03-04 17:24:03.330960 I | ceph-csi: successfully started CSI Ceph RBD driver
+2022-03-04 17:24:03.429665 I | op-k8sutil: CSI_CEPHFS_PLUGIN_TOLERATIONS="" (default)
+2022-03-04 17:24:03.429772 I | op-k8sutil: CSI_CEPHFS_PLUGIN_NODE_AFFINITY="" (default)
+2022-03-04 17:24:03.429793 I | op-k8sutil: CSI_CEPHFS_PLUGIN_RESOURCE="" (default)
+2022-03-04 17:24:03.454628 I | op-k8sutil: CSI_CEPHFS_PROVISIONER_TOLERATIONS="" (default)
+2022-03-04 17:24:03.454652 I | op-k8sutil: CSI_CEPHFS_PROVISIONER_NODE_AFFINITY="" (default)
+2022-03-04 17:24:03.454656 I | op-k8sutil: CSI_CEPHFS_PROVISIONER_RESOURCE="" (default)
+2022-03-04 17:24:03.543033 I | ceph-csi: successfully started CSI CephFS driver
+2022-03-04 17:24:03.549282 I | ceph-cluster-controller: cluster "rook-ceph": version "16.2.7-0 pacific" detected for image "quay.io/ceph/ceph:v16.2.7"
+2022-03-04 17:24:03.622453 I | op-k8sutil: CSI_RBD_FSGROUPPOLICY="ReadWriteOnceWithFSType" (configmap)
+2022-03-04 17:24:03.629694 I | ceph-csi: CSIDriver object created for driver "rook-ceph.rbd.csi.ceph.com"
+2022-03-04 17:24:03.629727 I | op-k8sutil: CSI_CEPHFS_FSGROUPPOLICY="None" (configmap)
+2022-03-04 17:24:03.641112 I | ceph-csi: CSIDriver object created for driver "rook-ceph.cephfs.csi.ceph.com"
+2022-03-04 17:24:03.836935 I | op-mon: start running mons
+2022-03-04 17:24:04.221352 I | op-mon: parsing mon endpoints: a=10.245.179.6:6789,b=10.245.12.2:6789
+2022-03-04 17:24:04.221388 I | op-mon: updating obsolete maxMonID 0 to actual value 1
+2022-03-04 17:24:05.222395 I | op-mon: saved mon endpoints to config map map[csi-cluster-config-json:[{"clusterID":"rook-ceph","monitors":["10.245.179.6:6789","10.245.12.2:6789"]}] data:a=10.245.179.6:6789,b=10.245.12.2:6789 mapping:{"node":{"a":null,"b":null,"c":null}} maxMonId:0]
+2022-03-04 17:24:05.821173 I | cephclient: writing config file /var/lib/rook/rook-ceph/rook-ceph.config
+2022-03-04 17:24:05.821489 I | cephclient: generated admin config in /var/lib/rook/rook-ceph
+2022-03-04 17:24:07.421457 I | op-mon: targeting the mon count 3
+2022-03-04 17:24:07.425508 I | op-config: setting "global"="mon allow pool delete"="true" option to the mon configuration database
+2022-03-04 17:24:07.929420 I | op-config: successfully set "global"="mon allow pool delete"="true" option to the mon configuration database
+2022-03-04 17:24:07.929449 I | op-config: setting "global"="mon cluster log file"="" option to the mon configuration database
+2022-03-04 17:24:08.363289 I | op-config: successfully set "global"="mon cluster log file"="" option to the mon configuration database
+2022-03-04 17:24:08.363313 I | op-config: setting "global"="mon allow pool size one"="true" option to the mon configuration database
+2022-03-04 17:24:08.867327 I | op-config: successfully set "global"="mon allow pool size one"="true" option to the mon configuration database
+2022-03-04 17:24:08.867352 I | op-config: setting "global"="osd scrub auto repair"="true" option to the mon configuration database
+2022-03-04 17:24:09.350602 I | op-config: successfully set "global"="osd scrub auto repair"="true" option to the mon configuration database
+2022-03-04 17:24:09.350637 I | op-config: setting "global"="log to file"="false" option to the mon configuration database
+2022-03-04 17:24:09.840467 I | op-config: successfully set "global"="log to file"="false" option to the mon configuration database
+2022-03-04 17:24:09.840501 I | op-config: setting "global"="rbd_default_features"="3" option to the mon configuration database
+2022-03-04 17:24:10.349446 I | op-config: successfully set "global"="rbd_default_features"="3" option to the mon configuration database
+2022-03-04 17:24:10.349491 I | op-config: deleting "log file" option from the mon configuration database
+2022-03-04 17:24:10.766724 I | op-config: successfully deleted "log file" option from the mon configuration database
+2022-03-04 17:24:10.766751 I | op-mon: creating mon c
+2022-03-04 17:24:10.812164 I | op-mon: mon "a" endpoint is [v2:10.245.179.6:3300,v1:10.245.179.6:6789]
+2022-03-04 17:24:10.842292 I | op-mon: mon "b" endpoint is [v2:10.245.12.2:3300,v1:10.245.12.2:6789]
+2022-03-04 17:24:10.852013 I | op-mon: mon "c" endpoint is [v2:10.245.116.223:3300,v1:10.245.116.223:6789]
+E0304 17:24:11.171818       1 runtime.go:78] Observed a panic: "invalid memory address or nil pointer dereference" (runtime error: invalid memory address or nil pointer dereference)
+goroutine 755 [running]:
+k8s.io/apimachinery/pkg/util/runtime.logPanic(0x1da3d80, 0x30d9af0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/runtime/runtime.go:74 +0x95
+k8s.io/apimachinery/pkg/util/runtime.HandleCrash(0x0, 0x0, 0x0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/runtime/runtime.go:48 +0x86
+panic(0x1da3d80, 0x30d9af0)
+	/opt/hostedtoolcache/go/1.16.13/x64/src/runtime/panic.go:965 +0x1b9
+github.com/rook/rook/pkg/operator/ceph/cluster/mon.wereMonEndpointsUpdated(0xc000a97620, 0xc000df6d50, 0x17)
+	/home/runner/work/rook/rook/pkg/operator/ceph/cluster/mon/predicate.go:99 +0x701
+github.com/rook/rook/pkg/operator/ceph/cluster/mon.PredicateMonEndpointChanges.func4(0x23dcc38, 0xc000e8f1d0, 0x23dcc38, 0xc0014d2280, 0x23dcc38)
+	/home/runner/work/rook/rook/pkg/operator/ceph/cluster/mon/predicate.go:50 +0xb2
+sigs.k8s.io/controller-runtime/pkg/predicate.Funcs.Update(...)
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.10.2/pkg/predicate/predicate.go:87
+sigs.k8s.io/controller-runtime/pkg/source/internal.EventHandler.OnUpdate(0x23accb0, 0xc00043e2a8, 0x23c7210, 0xc00012b620, 0xc000430060, 0x1, 0x1, 0x1ff5740, 0xc000e8f1d0, 0x1ff5740, ...)
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.10.2/pkg/source/internal/eventsource.go:88 +0x134
+k8s.io/client-go/tools/cache.(*processorListener).run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.22.2/tools/cache/shared_informer.go:775 +0x1c5
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0xc000d34f60)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/wait/wait.go:155 +0x5f
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0xc000745f60, 0x236e380, 0xc00069a810, 0x1d5b001, 0xc000ba6fc0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/wait/wait.go:156 +0x9b
+k8s.io/apimachinery/pkg/util/wait.JitterUntil(0xc000d34f60, 0x3b9aca00, 0x0, 0x1, 0xc000ba6fc0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/wait/wait.go:133 +0x98
+k8s.io/apimachinery/pkg/util/wait.Until(...)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/wait/wait.go:90
+k8s.io/client-go/tools/cache.(*processorListener).run(0xc00066f900)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.22.2/tools/cache/shared_informer.go:771 +0x95
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1(0xc0004d2370, 0xc000e0d620)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/wait/wait.go:73 +0x51
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/wait/wait.go:71 +0x65
+panic: runtime error: invalid memory address or nil pointer dereference [recovered]
+	panic: runtime error: invalid memory address or nil pointer dereference
+[signal SIGSEGV: segmentation violation code=0x1 addr=0x0 pc=0x185ba81]
+
+goroutine 755 [running]:
+k8s.io/apimachinery/pkg/util/runtime.HandleCrash(0x0, 0x0, 0x0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/runtime/runtime.go:55 +0x109
+panic(0x1da3d80, 0x30d9af0)
+	/opt/hostedtoolcache/go/1.16.13/x64/src/runtime/panic.go:965 +0x1b9
+github.com/rook/rook/pkg/operator/ceph/cluster/mon.wereMonEndpointsUpdated(0xc000a97620, 0xc000df6d50, 0x17)
+	/home/runner/work/rook/rook/pkg/operator/ceph/cluster/mon/predicate.go:99 +0x701
+github.com/rook/rook/pkg/operator/ceph/cluster/mon.PredicateMonEndpointChanges.func4(0x23dcc38, 0xc000e8f1d0, 0x23dcc38, 0xc0014d2280, 0x23dcc38)
+	/home/runner/work/rook/rook/pkg/operator/ceph/cluster/mon/predicate.go:50 +0xb2
+sigs.k8s.io/controller-runtime/pkg/predicate.Funcs.Update(...)
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.10.2/pkg/predicate/predicate.go:87
+sigs.k8s.io/controller-runtime/pkg/source/internal.EventHandler.OnUpdate(0x23accb0, 0xc00043e2a8, 0x23c7210, 0xc00012b620, 0xc000430060, 0x1, 0x1, 0x1ff5740, 0xc000e8f1d0, 0x1ff5740, ...)
+	/home/runner/go/pkg/mod/sigs.k8s.io/controller-runtime@v0.10.2/pkg/source/internal/eventsource.go:88 +0x134
+k8s.io/client-go/tools/cache.(*processorListener).run.func1()
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.22.2/tools/cache/shared_informer.go:775 +0x1c5
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil.func1(0xc000d34f60)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/wait/wait.go:155 +0x5f
+k8s.io/apimachinery/pkg/util/wait.BackoffUntil(0xc000745f60, 0x236e380, 0xc00069a810, 0x1d5b001, 0xc000ba6fc0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/wait/wait.go:156 +0x9b
+k8s.io/apimachinery/pkg/util/wait.JitterUntil(0xc000d34f60, 0x3b9aca00, 0x0, 0x1, 0xc000ba6fc0)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/wait/wait.go:133 +0x98
+k8s.io/apimachinery/pkg/util/wait.Until(...)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/wait/wait.go:90
+k8s.io/client-go/tools/cache.(*processorListener).run(0xc00066f900)
+	/home/runner/go/pkg/mod/k8s.io/client-go@v0.22.2/tools/cache/shared_informer.go:771 +0x95
+k8s.io/apimachinery/pkg/util/wait.(*Group).Start.func1(0xc0004d2370, 0xc000e0d620)
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/wait/wait.go:73 +0x51
+created by k8s.io/apimachinery/pkg/util/wait.(*Group).Start
+	/home/runner/go/pkg/mod/k8s.io/apimachinery@v0.22.2/pkg/util/wait/wait.go:71 +0x65
