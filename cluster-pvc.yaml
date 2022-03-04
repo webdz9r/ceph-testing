@@ -47,6 +47,22 @@ spec:
     ssl: false
   crashCollector:
     disable: false
+  placement:
+    all:
+      nodeAffinity:
+        requiredDuringSchedulingIgnoredDuringExecution:
+          nodeSelectorTerms:
+          - matchExpressions:
+            - key: role
+              operator: In
+              values:
+              - storage-node
+      podAffinity:
+      podAntiAffinity:
+      topologySpreadConstraints:
+      tolerations:
+      - key: storage-node
+        operator: Exists
   storage:
     storageClassDeviceSets:
       - name: set1
@@ -71,21 +87,20 @@ spec:
         # as soon as you have more than one OSD per node. The topology spread constraints will
         # give us an even spread on K8s 1.18 or newer.
         placement:
-          all:
-            nodeAffinity:
-              requiredDuringSchedulingIgnoredDuringExecution:
-                nodeSelectorTerms:
-                - matchExpressions:
-                  - key: role
-                    operator: In
-                    values:
-                    - storage-node
-            podAffinity:
-            podAntiAffinity:
-            topologySpreadConstraints:
-            tolerations:
-            - key: storage-node
-              operator: Exists
+          nodeAffinity:
+            requiredDuringSchedulingIgnoredDuringExecution:
+              nodeSelectorTerms:
+              - matchExpressions:
+                - key: role
+                  operator: In
+                  values:
+                  - storage-node
+          podAffinity:
+          podAntiAffinity:
+          topologySpreadConstraints:
+          tolerations:
+          - key: storage-node
+            operator: Exists
         resources:
         # These are the OSD daemon limits. For OSD prepare limits, see the separate section below for "prepareosd" resources
         #   limits:
